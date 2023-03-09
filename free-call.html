@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Collegemitra</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/header.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<style type="text/css">
+.form-style-8{
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 300px;
+	padding: 30px;
+	background: #FFFFFF;
+	margin: 50px auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+.form-style-8 h2{
+	background: #ff7800;
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: white;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+}
+.form-style-8 input[type="text"],
+.form-style-8 input[type="date"],
+.form-style-8 input[type="datetime"],
+.form-style-8 input[type="email"],
+.form-style-8 input[type="number"],
+.form-style-8 input[type="search"],
+.form-style-8 input[type="time"],
+.form-style-8 input[type="url"],
+.form-style-8 input[type="password"],
+.form-style-8 textarea,
+.form-style-8 select 
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+}
+.form-style-8 textarea{
+	resize:none;
+	overflow: hidden;
+}
+.form-style-8 input[type="button"], 
+.form-style-8 input[type="submit"]{
+	-moz-box-shadow: inset 0px 1px 0px 0px #ff7800;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ff7800;
+	box-shadow: inset 0px 1px 0px 0px #ff7800;
+	background-color: #ff7800;
+	border: 1px solid #ff7800;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 14px;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.form-style-8 input[type="button"]:hover, 
+.form-style-8 input[type="submit"]:hover {
+	background:linear-gradient(to bottom, orange 5%, orange 100%);
+	background-color:orange;
+}
+</style>
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-home"></i> Collegemitra </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#features">features</a>
+        <a href="#products">services</a>
+        <a href="#categories">events</a>
+        <a href="#review">review</a>
+        <a href="#blogs">blogs</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        <a href="./collegemitra/index.php"><div class="fas fa-user" id="login-btn"></div></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <!-- <form action="" class="login-form" id="login-form">
+        <h3>login now</h3>
+        <input type="email" placeholder="your email" class="box" name="email">
+        <input type="password" placeholder="your password" class="box" name="password">
+        <p>forget your password <a href="../user-system/index.php">click here</a></p>
+        <p>don't have an account <a href="../user-system/index.php">create now</a></p>
+        <input type="submit" value="login now" class="btn" id="login-btn">
+    </form> -->
+
+</header>
+<!-- header section ends -->
+
+
+<div class="form-style-8" style="margin-top: 130px;">
+    <h2>Register For Free Call <input type="button" value="Learn More" style="background-color: blue; margin-left:70.35%; margin-top:-100%;" id="learn-more-btn" data-toggle="modal" data-target="#learn-more-content"/></h2>
+    <form method="post" action="#" id="free-call-form">
+      <input type="text" name="name" placeholder="Full Name" />
+      <input type="text" name="phone" placeholder="Contact No." />
+      <input type="text" name="percentile" placeholder="Percentile" />
+      <input type="text" name="state" placeholder="State" />
+      <input type="text" name="category" placeholder="Category" />
+      
+      <input type="submit" id="free-call-submit-btn" value="Request Now" />
+      <h3 id="response" style="color: rgb(10, 167, 10);"> </h3>
+    </form>
+  </div>
+
+
+
+  	<!-- Modal -->
+<div class="modal fade" id="learn-more-content">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Collegemitra Free Calling Services</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <textarea type="text" class="form-control form-control-lg" readonly rows="3" cols="10">
+        1. You'll Get a Call From Our Side After Filling The Form.
+        2. You Can Request It only Once!
+        3. You Can ask any Questions Related to Your Percentile!
+        4. You'll Get a Call Withing 24hrs Of Your Registration.
+        </textarea>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- footer section starts  -->
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3> collegemitra <i class="fas fa-home"></i> </h3>
+            <p>provide counselling services for engineering admission</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> # </a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> # </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> collegemitra01@gmail.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> haryana, india - 125001 </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> services </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> events </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="subscribe" class="btn">
+            <img src="assets/payment.png" class="payment-img" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span> Collegemitra & team </span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js" ></script>
+
+<script src="./js/script.js"></script>
+<script type="text/javascript">
+
+$("#free-call-form").submit(function(e){
+  e.preventDefault();
+  $("#free-call-submit-btn").val("Please Wait...");
+  $.ajax({
+    url: './assets/php/predictor.php',
+    method: 'post',
+    data: $("#free-call-form").serialize()+'&action=free-call-submit',
+    success: function(response){
+      $("#free-call-submit-btn").val("Request Now");
+      $("#response").html("Your Form Has been submitted, You'll Recieve a call within 24 hrs!")
+    }
+  });
+});
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Collegemitra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+	<meta name="theme-color" content="#4A148C" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#4A148C">
+	<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+	<style type="text/css">
+		@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+		* {
+			-webkit-user-select: none;
+			/* Safari */
+			-ms-user-select: none;
+			/* IE 10 and IE 11 */
+			user-select: none;
+			/* Standard syntax */
+			-webkit-user-drag: none;
+			-khtml-user-drag: none;
+			-moz-user-drag: none;
+			-o-user-drag: none;
+		}
+		
+		.buton{
+			background-color: #4A148C;
+			color: #f3e5f5;
+			transition: 0s;
+			border-radius: 64px;
+			border-width: 1px;
+			border-color: #4A148C;
+			margin-bottom: 64px;
+		}
+		.buton:hover{
+			background-color: #f3e5f5;
+			color: #4A148C;
+		}
+        @media only screen and (min-width: 768px) {
+        p {
+          font-size: 150%;
+        }
+        h4{
+            font-size: 150%;
+        }
+        tr{
+            font-size: 150%;
+        }
+      }
+	</style>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/header.css">
+
+</head>
+<body style="background-color: #f3e5f5;">
+
+    <!-- header section starts  -->
+
+<header class="header">
+
+    <a href="index.html" class="logo" style="text-decoration: none;"> <i class="fas fa-home"></i> Collegemitra </a>
+
+    <nav class="navbar" style="display: inline-block">
+        <a href="index.html" style="text-decoration: none;">home</a>
+        <a href="index.html#features" style="text-decoration: none;">features</a>
+        <a href="index.html#products" style="text-decoration: none;">services</a>
+        <a href="index.html#categories" style="text-decoration: none;">events</a>
+        <a href="index.html#review" style="text-decoration: none;">review</a>
+        <a href="index.html#blogs" style="text-decoration: none;">blogs</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars"  id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <form action="" class="login-form">
+        <h3>login now</h3>
+        <input type="email" placeholder="your email" class="box">
+        <input type="password" placeholder="your password" class="box">
+        <p>forget your password <a href="#">click here</a></p>
+        <p>don't have an account <a href="#">create now</a></p>
+        <input type="submit" value="login now" class="btn">
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+
+
+
+<center style="padding-top: 100px;" id="content">
+    <div class="card p-4 pt-4 m-4 rounded shadow text-white"
+        style="max-width: 150rem;background-color: white; margin-bottom: 100%;" id="report">
+
+    <h2 style="color: #4A148C; font-size: 250%;">Engineering College Predictor For JEE Mains 2023</h2>
+	<h4 style="color: #4A148C; font-size: 200%;">(JOSAA+CSAB+UPTU+MPDTE+HSTES)</h4>
+
+<form action="#" method="post" class="px-3" id="predictor-form">
+    <!--Select category-->
+    <div class="p-4" style="max-width: 40rem;">
+        <select class="form-select shadow p-2 rounded-2 form-control" style="font-size: 150%;" aria-label="Default select example" id="category" required
+            name="category" required>
+            <option selected disabled>Select Your Category</option>
+            <option value="OPEN">OPEN</option>
+            <option value="EWS">EWS</option>
+            <option value="OBC-NCL">OBC-NCL</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+        </select>
+    </div>
+
+    <!--Select quota-->
+    <!-- <div class="p-4" style="max-width: 40rem;">
+        <select class="form-select shadow p-2 rounded-2 form-control" style="font-size: 150%;" aria-label="Default select example" id="category"
+            name="quota" required>
+            <option selected disabled>Select Your Quota</option>
+            <option value="AI">All india</option>
+            <option value="OS">Other State</option>
+            <option value="HS">Home State</option>
+        </select>
+    </div> -->
+
+    <!--Select Gender-->
+    <div class="p-4" style="max-width: 40rem;">
+        <select class="form-select form-control shadow p-2 rounded-2" style="font-size: 150%;" aria-label="Default select example" id="category"
+            name="gender" required>
+            <option selected disabled>Select Gender</option>
+            <option value="Gender-Neutral">Gender Neutral</option>
+            <option value="Female-Only">Female Only</option>
+        </select>
+    </div>
+
+    <!--Select Counselling-->
+    <div class="p-4" style="max-width: 40rem;">
+        <select class="form-select form-control shadow p-2 rounded-2" style="font-size: 150%;" aria-label="Default select example" id="category"
+            name="counselling" required>
+            <option selected disabled>Select Counselling</option>
+            <option value="ALL">ALL</option>
+            <option value="CSAB">CSAB</option>
+            <option value="UPTU">UPTU</option>
+            <option value="MPDTE">MPDTE</option>
+        </select>
+    </div>
+
+    <!--enter your rank-->
+
+    <div class="p-4" style="max-width: 40rem;">
+        <input type="number" required name="rank" class="form-control p-2 shadow rounded-2" placeholder="Enter your rank here" style="font-size: 150%;" id="rank">
+    </div>
+
+    
+
+    <div class="p-4" style="max-width: 40rem;">
+    <input type="submit" name="submit" class="text-light shadow btn btn-primary btn-lg btn-block myBtn form-control" id="predictor-submit"  style="background-color: #4A148C; font-size: 150%;" value="Predict Now">
+    </div>
+
+</form></div>
+    
+       
+    <div id="fetchAllColleges" style="margin-top: 2%;">
+        <div class="col-lg-18">
+            <div class="card my-2 border-warning">
+              <div class="card-header text-white" style="background-color: #ff7800;">
+                <h4 class="m-0" style="font-size: 150%;"><b>Colleges Based On Your Rank</b></h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                <table class="table table-striped text-center table-bordered" id="myTable">
+                      <thead>
+                          <tr style="font-size: 150%;">
+                              <th>#</th>
+                              <th>College</th>
+                              <th>Branch</th>
+                              <th>Category</th>
+                              <th>Quota</th>
+                              <th>Opening Rank</th>
+                              <th>Closing Rank</th>
+                              <th>Counselling</th>
+                              <th>Type</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr style="font-size: 150%;">
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  
+                  <p class="text-center align-self-center lead">Please Wait...</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+    </div>
+    </center>
+
+
+    
+  
+
+
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer" style="margin-top: 60px;">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3> collegemitra <i class="fas fa-home"></i> </h3>
+            <p>provide counselling services for engineering admission</p>
+            <div class="share">
+                <a href="#" style="text-decoration: none;" class="fab fa-facebook-f"></a>
+                <a href="#" style="text-decoration: none;" class="fab fa-twitter"></a>
+                <a href="#" style="text-decoration: none;" class="fab fa-instagram"></a>
+                <a href="#" style="text-decoration: none;" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#" class="links" style="text-decoration: none;"> <i class="fas fa-phone"></i> # </a>
+            <a href="#" class="links" style="text-decoration: none;"> <i class="fas fa-phone"></i> # </a>
+            <a href="#" class="links" style="text-decoration: none;"> <i class="fas fa-envelope"></i> collegemitra01@gmail.com </a>
+            <a href="#" class="links" style="text-decoration: none;"> <i class="fas fa-map-marker-alt"></i> haryana, india - 125001 </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#" class="links" style="text-decoration: none;"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#" class="links" style="text-decoration: none;"> <i class="fas fa-arrow-right"></i> features </a>
+            <a href="#" class="links" style="text-decoration: none;"> <i class="fas fa-arrow-right"></i> services </a>
+            <a href="#" class="links" style="text-decoration: none;"> <i class="fas fa-arrow-right"></i> events </a>
+            <a href="#" class="links" style="text-decoration: none;"> <i class="fas fa-arrow-right"></i> review </a>
+            <a href="#" class="links" style="text-decoration: none;"> <i class="fas fa-arrow-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="subscribe" class="btn">
+            <img src="assets/payment.png" class="payment-img" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span> Collegemitra & team </span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="./js/script.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
+
+
+<script>
+
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+
+ //College predictor ajax request
+$("#predictor-form").submit(function(e){
+      e.preventDefault();
+      $.ajax({
+        url: 'assets/php/predictor.php',
+        method: 'post',
+        data: $("#predictor-form").serialize()+'&action=predict_college',
+        success: function(response){
+          console.log(response);
+          $("#fetchAllColleges").html(response);
+          $("#myTable").DataTable(response);
+        }
+    });
+});
+
+
+</script>
+
+</body>
+</html>

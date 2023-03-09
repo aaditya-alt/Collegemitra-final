@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeList - Collegemitra</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    Google Fonts
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3.75em;
+  margin: 0.6em 0;
+  font-weight: 600;
+  color: #070024;
+}
+.column {
+  padding: 2em;
+}
+.card {
+  padding: 3.1em 1.25em;
+  text-align: center;
+  background: white;
+  background-repeat: no-repeat;
+  background-position: 0 0.62em;
+  box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
+  border-radius: 0.5em;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.card .icon {
+  font-size: 2.5em;
+  height: 2em;
+  width: 2em;
+  margin: auto;
+  background-color: #ff7800;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+}
+.icon:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  border: 0.12em solid #ff7800;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.card h3 {
+  font-size: 1.3em;
+  margin: 1em 0 1.4em 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #070024;
+}
+.card p {
+  line-height: 2em;
+  color: #625a71;
+}
+.card:hover {
+  background-position: 0;
+  background: linear-gradient(0deg, #ff7800 10px, transparent 10px);
+}
+.card:hover .icon:before {
+  height: 2.25em;
+  width: 2.25em;
+}
+@media screen and (min-width: 768px) {
+  features {
+    padding: 1em 7em;
+  }
+}
+@media screen and (min-width: 992px) {
+  features {
+    padding: 1em;
+  }
+  .card {
+    padding: 5em 2em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 2 1em;
+  }
+}
+
+.conclusion {
+  text-align: center;
+  /* margin-top: 30px; */
+  background-color: #f9f9f9;
+  /* padding: 50px;
+  text-align: center; */
+}
+
+.conclusion h2{
+  padding-bottom: 10px;
+}
+
+.conclusion p {
+  font-size: 15px;
+  line-height: 1.5;
+  padding-bottom: 20px;
+}
+
+.conclusion ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.conclusion ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.conclusion ul li::before {
+  content: '\2713';
+  color: green;
+  font-size: 20px;
+  position: absolute;
+  left: auto;
+  margin-left: -20px;
+  top: 0;
+}
+
+.conclusion ul li .package-price {
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+}
+
+.conclusion ul li .package-price::after {
+  content: '\003d';
+  color: gray;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.conclusion .total-price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.conclusion .special-offer {
+  font-size: 22px;
+  font-weight: bold;
+  color: #02743b;
+  margin-top: 30px;
+}
+
+.conclusion .price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price s{
+  color: #aaa;
+  margin-right: 5px;
+}
+
+.package-name {
+  display: inline-block;
+  width: 220px;
+  text-align: left;
+}
+
+.package-price {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+}
+
+.package-price s {
+  color: #aaa;
+  margin-right: 5px;
+}
+
+.total-price {
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+
+.special-offer {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.purchase-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.purchase-button {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.purchase-button:hover {
+  background-color: #104111;
+}
+
+.call-button {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  cursor: pointer
+}
+
+.hide-button{
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #474a4b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.call-button :hover{
+  background-color: #007095;
+}
+
+/* .special-offer span{
+  color: #008CBA;
+} */
+/* Media queries for responsive design */
+
+@media screen and (max-width: 768px) {
+  .conclusion {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .purchase-buttons {
+    flex-direction: column;
+    font-size: 10px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .purchase-button {
+    margin-right: 1;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+.achievements {
+  background-color: #f9f9f9;
+  padding: 50px;
+  text-align: center;
+}
+
+.achievements h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements li {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.achievements li:before {
+  content: "✓";
+  margin-right: 10px;
+  color: #4CAF50;
+}
+.reviews-button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.mail-link{
+  background-color: #1900ff;
+  border-radius: 2px;
+  color: #fff;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.reviews-button:hover {
+  background-color: #007095;
+}
+
+/* @media (max-width: 768px) {
+  .conclusion ul li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+} */
+
+.review-section {
+  background-color: #f9f9f9;
+  padding: 50px;
+  text-align: center;
+}
+
+.review-heading {
+  display: inline-block;
+  background-color: #2ecc71;
+  color: #fff;
+  font-size: 3rem;
+  padding: 10px 20px;
+  /* border-radius: 5px; */
+  box-shadow: 0 0 10px #ddd;
+  /* margin-bottom: 30px; */
+  width: 100%;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.review-card {
+  width: auto;
+  height: 200px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px #ddd;
+  overflow: hidden;
+}
+
+.review-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border:black;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .review-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .review-card {
+    max-width: auto;
+    height: auto;
+  }
+}
+
+
+/* Hero section styling */
+/* Hero section styling */
+.hero {
+  background-image: url("./assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px){
+  .hero{
+    height: 65vh;
+  }
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero h1 b {
+  color: #ff0080;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  max-width: 60rem;
+  margin: 0 auto 2rem;
+}
+
+.hero p span {
+  font-weight: bold;
+  color: #ff0080;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.timer {
+  width: 12rem;
+  height: 12rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.time {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.start-journey-btn {
+  display: block;
+  background-color: #ff0080;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.5rem 3rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.review-section{
+  background-image: url("./assets/review.avif");
+  background-size: cover;
+  background-position: center;
+}
+.review-heading{
+  display: block;
+  background-color: #ff0080;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.5rem 3rem;
+  /* border-radius: 2rem; */
+  transition: all 0.3s ease-in-out;
+  font-size: 130%;
+}
+
+.start-journey-btn:hover {
+  background-color: #e60073;
+  cursor: pointer;
+}
+
+/* Countdown timer styling */
+.timer::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 0.5rem solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.timer::after {
+  content: '';
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: 0.5rem solid #ff0080;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 1;
+  animation: timer 1620s linear forwards;
+}
+
+@keyframes timer {
+  from {
+    transform: rotate(1);
+    }
+to {
+transform: rotate(0);
+}
+}
+
+.timer .time {
+position: absolute;
+z-index: 2;
+top: 55%;
+left: 55%;
+transform: translate(-50%, -50%);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 30px;
+  /* border-radius: 10px; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question h3 {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 0;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.faq-question h3 i {
+  margin-right: 10px;
+  font-size: 12px;
+  color: #999;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 18px;
+  margin-left: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+
+.faq-answer p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.faq-item.active .faq-question h3 {
+  color: #f44336;
+}
+
+.faq-item.active .faq-question h3 i {
+  transform: rotate(45deg);
+  color: #f44336;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+  
+</style>
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="index.html" class="logo"> <i class="fas fa-home"></i> Collegemitra </a>
+
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="index.html#features">features</a>
+        <a href="index.html#products">services</a>
+        <a href="index.html#categories">events</a>
+        <a href="index.html#review">review</a>
+        <a href="index.html#blogs">blogs</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        <a href="./collegemitra/index.php"><div class="fas fa-user" id="login-btn"></div></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- <div class="achievements" style="font-size: 130%;">
+  <h2>Our Achievements</h2>
+  <ul>
+    <li>Another student got admission in YMCA Faridabad Civil from Other State at 424,183 Rank.<a class="mail-link" href="mailto:mdkaif05042003@gmail.com">Mail Now</a></li>
+    <li>Vikash Kumar got Cse IN CDLSIET Sirsa At the Rank Of 474418.<b>+5 Similar</b><a class="mail-link" href="mailto:vikash756383@gmail.com">Mail Now</a></li>
+    <li>Saroj Mandal Got Cse in Rajiv Gandhi Technical University at the rank of 556678.<a class="mail-link" href="mailto:sarojmd2004@gmail.com">Mail Now</a></li>
+    <li>Aman Got Cse in LNCT Main Campus at the rank of 215758 in jee mains.<a class="mail-link" href="mailto:raj117557@gmail.com">Mail Now</a></li>
+    <li>Suraj dahiya got cse(ai&ml) in mdu rohtak at a rank of 210105. <b>+3 Similar</b><a class="mail-link" href="mailto:sujal22csu325@ncuindia.edu">Mail Now</a></li>
+    <li>Anshrit Got KNIT Sultanpur EE at a rank of 250448 in jee mains through UPTU Counselling.<a class="mail-link" href="mailto:anshritsingh@gmail.com">Mail Now</a></li>
+    <li>Saravjeet singh got GJUST Hisar IT Branch at a rank of 222643 Through Physical counselling.<a class="mail-link" href="mailto:saravjeetofficial7@gmail.com">Mail Now</a></li>
+    <li>Ojas kashyap got SMDVU Katra Cse at a rank of 147875 in our guidance.<a class="mail-link" href="mailto:kumarvineet.77@gmail.com">Mail Now</a></li>
+    <li>Vikash srivastava got MMMUT Gorakhpur ECE at a rank of 73456 in jee mains.<a class="mail-link" href="mailto:vikassrivastava2892021@gmail.com">Mail Now</a></li>
+    <li>G likhith got material sciences in MANIT Bhopal at a rank of 68,000 in jee mains. <b>+1 Similar</b><a class="mail-link" href="mailto:geddambhaigaming@gmail.com">Mail Now</a></li>
+    <li>Rohit Tiwari Got GJUST Hisar Cse(Ai&ML) at a rank of 219,000 In JEE Mains. <b>+3 Similar</b><a class="mail-link" href="mailto:rohit.tiwari5678@gmail.com">Mail Now</a></li>
+    <li>Girish Got MBM Jodhpur AI&DS at a rank of 100799 Through Our Guidance by Reap Counselling.<a class="mail-link" href="mailto:gmaheshwari799@gmail.com">Mail Now</a></li>
+
+    <li><b>And 200 More Tremendous Results....... </b></li>
+  </ul>
+  <button class="reviews-button">See Some Reviews</button>
+</div> -->
+<section class="hero">
+  <div class="container" style="font-size: 130%;">
+    <h1>Welcome to Our <b>Counselling</b> Service</h1>
+    <p>Our professional team is here to guide and support you through your <span>journey of getting into college</span>.</p>
+    <div class="countdown">
+      <div class="timer" id="timer">
+        <!-- <div class="time" id="hours">00</div>
+         <div class="label">hours</div> -->
+        <!-- <div class="time" id="minutes">27</div>
+         <div class="label">minutes</div>  -->
+         <div class="time" id="seconds">100</div> 
+         <!-- <div class="label">seconds</div>  -->
+      </div>
+    </div>
+    <a href="payment.html" class="start-journey-btn">Start Your Journey Now</a>
+  </div>
+</section>
+<hr style="height: 10px; background-color: #007bff; width: 100%;">
+
+
+<!--Main area of interest-->
+
+<div class="conclusion" style="font-size: 140%; padding-bottom: 40px; padding-top: 30px;">
+  <h2 style="padding-top: 20px;">Ready to Get Started?</h2>
+  <p>We offer a range of counseling packages to help you get into your dream college:</p>
+  <ul>
+    <li><span class="package-name">Unlimited Calls</span><span class="package-price"><s>₹999</s> ₹299</span></li>
+    <li><span class="package-name">Choice Filling</span><span class="package-price"><s>₹999</s> ₹299</span></li>
+    <li><span class="package-name">Google Meet Sessions</span><span class="package-price"><s>₹999</s> ₹299</span></li>
+    <li><span class="package-name">Best eBook for Admissions</span><span class="package-price"><s>₹599</s> ₹199</span></li>
+    <li><span class="package-name">Personalized Mentor</span><span class="package-price"><s>₹999</s> ₹299</span></li>
+    <li><span class="package-name">Chat Support</span><span class="package-price"><s>₹999</s> ₹299</span></li>
+    <li><span class="package-name">Senior Interaction</span><span class="package-price"><s>₹999</s> ₹299</span></li>
+  </ul>
+  <p><span class="total-price">Total Price: <span class="price"><s>₹1899</s></span></span></p>
+  <p><span class="special-offer">Special Offer : Get all these features for just <span class="price"><span>₹399</span></span> (Only Few slots available)</p>
+  <div class="purchase-buttons">
+    <a href="payment.html"><button class="purchase-button">purchase Now</button></a>
+    <button class="call-button" id="requestCallBtn" onclick="requestCall(this)">Request a Call</button>
+    <button class="hide-button" id="hideBtn" onclick="hide(this)">Hide</button>
+  </div>
+  <div class="footer" id="requstCallForm" style="display: none;">
+    <div class="box-container">
+  <div class="box">
+    <form action="">
+    <input type="email" placeholder="your contact no." class="email" style="width: 80%;">
+    <input type="submit" value="request now" class="btn">
+  </form>
+  </div>
+    </div>
+  </div>
+</div>
+
+
+
+<h2 class="review-heading" style="font-size: 2.5rem;">What Our Students Say</h2>
+<div class="review-section" style="font-size: 130%;">
+  <div class="review-container">
+    <div class="review-card">
+      <img src="./assets/review1.jpg" alt="Student Review 1">
+    </div>
+    <div class="review-card">
+      <img src="./assets/review2.jpg" alt="Student Review 2">
+    </div>
+    <div class="review-card">
+      <img src="./assets/review3.jpg" alt="Student Review 3">
+    </div>
+    <div class="review-card">
+      <img src="./assets/review4.jpg" alt="Student Review 3">
+    </div>
+    <div class="review-card">
+      <img src="./assets/review5.jpg" alt="Student Review 3">
+    </div>
+    <div class="review-card">
+      <img src="./assets/review6.jpg" alt="Student Review 3">
+    </div>
+  </div>
+</div>
+<hr style="height: 10px; background-color: #007bff; width: 100%;">
+
+
+
+
+
+
+
+<features>
+    <div class="row" style="margin-top: 20px; font-size:110%;">
+      <h1><span style="background: var(--orange);
+        color:#fff;
+        display: inline-block;
+        padding:.5rem 3rem;
+        clip-path: polygon(100% 0, 95% 50%, 100% 99%, 0% 100%, 5% 50%, 0% 0%);">Premium Features</span></h1>
+    </div>
+    <div class="row">
+      <!-- Column One -->
+      <div class="column" style="font-size: 150%;">
+        <div class="card">
+          <div class="icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h3>Affordable Fee</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            asperiores natus ad molestiae aliquid explicabo. Iste eaque quo et
+            commodi.
+          </p>
+        </div>
+      </div>
+      <!-- Column Two -->
+      <div class="column" style="font-size: 150%;">
+        <div class="card">
+          <div class="icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Personalized Mentor</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            asperiores natus ad molestiae aliquid explicabo. Iste eaque quo et
+            commodi.
+          </p>
+        </div>
+      </div>
+      <!-- Column Three -->
+      <div class="column" style="font-size: 150%;">
+        <div class="card">
+          <div class="icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3>Best Ebook</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            asperiores natus ad molestiae aliquid explicabo. Iste eaque quo et
+            commodi.
+          </p>
+        </div>
+      </div>
+      <!--column 4-->
+      <div class="column" style="font-size: 150%;">
+        <div class="card">
+          <div class="icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Choice Filling</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            asperiores natus ad molestiae aliquid explicabo. Iste eaque quo et
+            commodi.
+          </p>
+        </div>
+      </div>
+      <!--column 5-->
+      <div class="column" style="font-size: 150%;">
+        <div class="card">
+          <div class="icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3>Unlimited Call</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            asperiores natus ad molestiae aliquid explicabo. Iste eaque quo et
+            commodi.
+          </p>
+        </div>
+      </div>
+      <!--column 6-->
+      <div class="column" style="font-size: 150%;">
+        <div class="card">
+          <div class="icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>Google Meet</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            asperiores natus ad molestiae aliquid explicabo. Iste eaque quo et
+            commodi.
+          </p>
+        </div>
+      </div>
+      <!--Column 7-->
+      <div class="column" style="font-size: 150%;">
+        <div class="card">
+          <div class="icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>Senior Interaction</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            asperiores natus ad molestiae aliquid explicabo. Iste eaque quo et
+            commodi.
+          </p>
+        </div>
+      </div>
+      <!--Column 8-->
+      <div class="column" style="font-size: 150%;">
+        <div class="card">
+          <div class="icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>Chat Support</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            asperiores natus ad molestiae aliquid explicabo. Iste eaque quo et
+            commodi.
+          </p>
+        </div>
+      </div>
+      <!--Column 9-->
+      <!--Column 8-->
+      <div class="column" style="font-size: 150%;">
+        <div class="card">
+          <div class="icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>Chat Support</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            asperiores natus ad molestiae aliquid explicabo. Iste eaque quo et
+            commodi.
+          </p>
+        </div>
+      </div>
+    </div>
+</features>
+
+
+<h2 class="start-journey-btn" style="font-size: 2.5rem; border-radius: 0%;">Frequently Asked Questions</h2>
+
+
+
+<div class="faq-container">
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3><i class="fas fa-plus"></i> What is Lorem Ipsum?</h3>
+    </div>
+    <div class="faq-answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit arcu eu eros pulvinar bibendum. Morbi nec quam rhoncus, tristique tellus vel, ultrices felis. Vestibulum ultrices vel elit nec facilisis.</p>
+    </div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3><i class="fas fa-plus"></i> How do I contact customer support?</h3>
+    </div>
+    <div class="faq-answer">
+      <p>You can reach our customer support team at support@website.com or by calling our toll-free number 1-800-123-4567. Our support team is available 24/7 to assist you.</p>
+    </div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3><i class="fas fa-plus"></i> Is there a refund policy?</h3>
+    </div>
+    <div class="faq-answer">
+      <p>Yes, we offer a 30-day money-back guarantee on all our products. If you're not satisfied with your purchase, please contact our customer support team for a refund.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+ 
+
+
+
+
+<hr style="height: 10px; background-color: #007bff; width: 100%;">
+
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3> collegemitra <i class="fas fa-home"></i> </h3>
+            <p>provide counselling services for engineering admission</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> # </a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> # </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> collegemitra01@gmail.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> haryana, india - 125001 </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> services </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> events </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="subscribe" class="btn">
+            <img src="assets/payment.png" class="payment-img" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span> Collegemitra & team </span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+  const requestCallForm = document.getElementById('requstCallForm');
+  const requestCallBtn = document.getElementById('requestCallBtn');
+  function requestCall(element){
+    requestCallForm.style.display = 'inline';
+    const hideBtn = document.getElementById('hideBtn');
+    element.style.display = 'none';
+    hideBtn.style.display = 'inline';
+  }
+  function hide(hideElement){
+      requestCallForm.style.display = 'none';
+      requestCallBtn.style.display = 'inline';
+      hideElement.style.display = 'none';
+
+    }
+
+  // Set the initial time
+var seconds = 100;
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Decrement the seconds by 1
+  seconds--;
+
+  // Display the new value of seconds
+  document.getElementById("seconds").innerHTML = seconds;
+
+  // If the count down is finished, clear the interval and display "0"
+  if (seconds == 0) {
+    clearInterval(x);
+    document.getElementById("seconds").innerHTML = "0";
+  }
+  
+}, 1000);
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+
+  question.addEventListener('click', () => {
+    item.classList.toggle('active');
+  });
+});
+
+
+
+</script>
+</body>
+</html>

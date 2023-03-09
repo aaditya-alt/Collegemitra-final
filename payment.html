@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeList - Collegemitra</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <style>
+
+/* 64ac15 */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.container {
+  padding: 1em;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #b9b9b9;
+  background-color: #e3e3e3;
+}
+
+h4 {
+  color: #f0a500;
+}
+input,
+input[type="radio"] + label,
+input[type="checkbox"] + label:before,
+select option,
+select {
+  width: 100%;
+  padding: 1em;
+  line-height: 1.4;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+input:focus {
+  outline: 0;
+  border-color: #bd8200;
+}
+input:focus + .input-icon i {
+  color: #f0a500;
+}
+input:focus + .input-icon:after {
+  border-right-color: #f0a500;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label,
+select {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  float: left;
+  border-radius: 0;
+}
+input[type="radio"] + label:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+input[type="radio"] + label:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+input[type="radio"] + label i {
+  padding-right: 0.4em;
+}
+input[type="radio"]:checked + label,
+input:checked + label:before,
+select:focus,
+select:active {
+  background-color: #f0a500;
+  color: #fff;
+  border-color: #bd8200;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  position: relative;
+  display: block;
+  padding-left: 1.6em;
+}
+input[type="checkbox"] + label:before {
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+  content: "";
+}
+input[type="checkbox"] + label:after {
+  position: absolute;
+  top: 0.45em;
+  left: 0.2em;
+  font-size: 0.8em;
+  color: #fff;
+  opacity: 0;
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+input:checked + label:after {
+  opacity: 1;
+}
+select {
+  height: 3.4em;
+  line-height: 2;
+}
+select:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+select:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+select:focus,
+select:active {
+  outline: 0;
+}
+select option {
+  background-color: #f0a500;
+  color: #fff;
+}
+.input-group {
+  margin-bottom: 1em;
+  zoom: 1;
+}
+.input-group:before,
+.input-group:after {
+  content: "";
+  display: table;
+}
+.input-group:after {
+  clear: both;
+}
+.input-group-icon {
+  position: relative;
+}
+.input-group-icon input {
+  padding-left: 4.4em;
+}
+.input-group-icon .input-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.4em;
+  height: 3.4em;
+  line-height: 3.4em;
+  text-align: center;
+  pointer-events: none;
+}
+.input-group-icon .input-icon:after {
+  position: absolute;
+  top: 0.6em;
+  bottom: 0.6em;
+  left: 3.4em;
+  display: block;
+  border-right: 1px solid #e5e5e5;
+  content: "";
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.input-group-icon .input-icon i {
+  -webkit-transition: 0.35s ease-in-out;
+  -moz-transition: 0.35s ease-in-out;
+  -o-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.container {
+  max-width: 38em;
+  padding: 1em 3em 2em 3em;
+  margin: 0em auto;
+  background-color: #fff;
+  border-radius: 4.2px;
+  box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+}
+.row {
+  zoom: 1;
+}
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.col-half {
+  padding-right: 10px;
+  float: left;
+  width: 50%;
+}
+.col-half:last-of-type {
+  padding-right: 0;
+}
+.col-third {
+  padding-right: 10px;
+  float: left;
+  width: 33.33333333%;
+}
+.col-third:last-of-type {
+  padding-right: 0;
+}
+@media only screen and (max-width: 540px) {
+  .col-half {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+input[type=checkbox] + label:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 2px solid #aaa;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+input[type=checkbox]:checked + label:before {
+  content: '\2714';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  font-size: 16px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="index.html" class="logo"> <i class="fas fa-home"></i> Collegemitra </a>
+
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="index.html#features">features</a>
+        <a href="index.html#products">services</a>
+        <a href="index.html#categories">events</a>
+        <a href="index.html#review">review</a>
+        <a href="index.html#blogs">blogs</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        <a href="./collegemitra/index.php"><div class="fas fa-user" id="login-btn"></div></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <!-- <form action="" class="login-form" id="login-form">
+        <h3>login now</h3>
+        <input type="email" placeholder="your email" class="box" name="email">
+        <input type="password" placeholder="your password" class="box" name="password">
+        <p>forget your password <a href="../user-system/index.php">click here</a></p>
+        <p>don't have an account <a href="../user-system/index.php">create now</a></p>
+        <input type="submit" value="login now" class="btn" id="login-btn">
+    </form> -->
+
+</header>
+
+<!-- header section ends -->
+
+
+<div class="container" style="margin-top: 100px; margin-bottom: 50px;">
+    <form action="#" method="post" id="payment-details-form">
+        <div class="row">
+            <h4 style="font-size: 130%;">Account</h4>
+            <div class="input-group input-group-icon">
+                <input type="text" placeholder="Full Name" name="name">
+                <div class="input-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            <div class="input-group input-group-icon">
+                <input type="email" placeholder="Email Adress" name="email">
+                <div class="input-icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+            </div>
+            <div class="input-group input-group-icon">
+              <input type="number" placeholder="Contact No." name="phone">
+              <div class="input-icon">
+                  <i class="fa fa-envelope"></i>
+              </div>
+          </div>
+            <div class="input-group input-group-icon">
+                <input type="password" placeholder="Password" name="password">
+                <div class="input-icon">
+                    <i class="fa fa-key"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-half">
+                <h4>Date of Birth</h4>
+                <div class="input-group">
+                    <div class="col-third">
+                        <input type="text" placeholder="DD" name="dd">
+                    </div>
+                    <div class="col-third">
+                        <input type="text" placeholder="MM" name="mm">
+                    </div>
+                    <div class="col-third">
+                        <input type="text" placeholder="YY" name="yy">
+                    </div>
+                </div>
+            </div>
+            <div class="col-half">
+                <h4>Gender</h4>
+                <div class="input-group">
+                    <input type="radio" name="gender" value="male" id="gender-male">
+                    <label for="gender-male">Male</label>
+                    <input type="radio" name="gender" value="female" id="gender-female">
+                    <label for="gender-female">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Counseling Details</h4>
+            <div class="input-group">
+                <input type="checkbox" name="counselling[]" value="HSTES" id="hstes" onclick="updatePrice()" class="other">
+                <label for="hstes">HSTES</label>
+                <input type="checkbox" name="counselling[]" value="UPTU" id="uptu" onclick="updatePrice()" class="other">
+                <label for="uptu">UPTU</label>
+                <input type="checkbox" name="counselling[]" value="REAP" id="reap" onclick="updatePrice()" class="other">
+                <label for="reap">REAP</label>
+                <input type="checkbox" name="counselling[]" value="UGEAC" id="ugeac" onclick="updatePrice()" class="other">
+                <label for="ugeac">UGEAC</label>
+                <input type="checkbox" name="counselling[]" value="MPDTE" id="mpdte" onclick="updatePrice()" class="other">
+                <label for="mpdte">MPDTE</label>
+                <input type="checkbox" name="counselling[]" value="OJEE" id="ojee" onclick="updatePrice()" class="other">
+                <label for="ojee">OJEE</label>
+                <input type="checkbox" name="counselling[]" value="JOSAA" id="josaa" onclick="updatePrice()">
+                <label for="josaa">JOSAA</label>
+                <input type="checkbox" name="counselling[]" value="GGSIPU" id="ggsipu" onclick="updatePrice()" class="other">
+                <label for="ggsipu">GGSIPU</label>
+            </div>
+            <div class="input-group input-group-icon">
+                <input type="text" placeholder="JEE Mains Rank" name="rank">
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                </div>
+            </div>
+            <div class="col-half">
+                <div class="input-group input-group-icon">
+                    <input type="text" id="amount" value="" readonly name="amount">
+                    <div class="input-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-half">
+                <div class="input-group">
+                <select name="state" id="state">
+                    <option value="Bihar">Bihar</option>
+                    <option value="Haryana">Haryana</option>
+                </select>
+                <select name="category" id="category">
+                    <option value="General">General</option>
+                    <option value="Ews">Gen-EWS</option>
+                </select>
+             </div>
+            </div>
+        </div>
+        <div class="row">
+            <h4>Terms and Conditions</h4>
+            <div class="input-group">
+                <input type="checkbox" id="terms">
+                <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+                
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit" id="payment-details-submit-btn" style="background-color: #f0a500; padding:12px; width: 500px; cursor: pointer;">Submit Now</button>
+        </div>
+    </form>
+</div>
+
+
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog" role="document">
+     <div class="modal-content" style="font-size: 130%;">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel" style="font-size: 130%;">Payment Details</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+       <form action= "https://test.payu.in/_payment" method="post" id="pay-now-form">
+      </div>
+      <div class="modal-footer" style="font-size: 130%;">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-size: 130%;">Close</button>
+        <input type="submit" value="Pay Now" class="btn btn-primary" id="pay-now-btn" style="font-size: 130%;">
+      </div>
+</form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3> collegemitra <i class="fas fa-home"></i> </h3>
+            <p>provide counselling services for engineering admission</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> # </a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> # </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> collegemitra01@gmail.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> haryana, india - 125001 </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> services </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> events </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+        </div>
+
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="subscribe" class="btn">
+            <img src="assets/payment.png" class="payment-img" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span> Collegemitra & team </span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+<div hidden id="json"></div>
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" ></script>
+
+<script src="./js/script.js"></script>
+<script>
+  function updatePrice() {
+    let numChecked = document.querySelectorAll('input[type=checkbox]:checked').length;
+    let price = 0;
+
+    if (document.getElementById('josaa').checked) {
+      price = price+599;
+    } 
+    if(document.getElementById('hstes').checked){
+      price = price+399;
+    }
+    if(document.getElementById('uptu').checked){
+      price = price+399;
+    }
+    if(document.getElementById('mpdte').checked){
+      price = price+399;
+    }
+    if(document.getElementById('reap').checked){
+      price = price+399;
+    }
+    if(document.getElementById('ugeac').checked){
+      price = price+399;
+    }
+    if(document.getElementById('ggsipu').checked){
+      price = price+399;
+    }
+    if(document.getElementById('ojee').checked){
+      price = price+399;
+    }
+
+
+    if(numChecked>=3 && numChecked<5){
+      price = price - 200;
+      alert('200 Discount Applied!');
+    }
+    else if(numChecked>=5){
+      price = price-500;
+      alert('500 Discount Applied!');
+    }
+    
+  
+    
+    // if (numChecked > 3) {
+    //   price = numChecked === 5 ? 500 : 200;
+    // } else {
+    //   price = 0;
+    // }
+    
+    document.getElementById('amount').value = `${price}`;
+    let checkboxes = document.querySelectorAll('input[name=counselling]:checked');
+    let values = Array.from(checkboxes).map(checkbox => checkbox.value);
+    let json = JSON.stringify({ counselling: values });
+  }
+
+  //Send payment details to make hash value and txn id
+  $("#payment-details-form").submit(function(e){
+    e.preventDefault();
+    $.ajax({
+      url: './assets/php/predictor.php',
+      method: 'post',
+      data: $("#payment-details-form").serialize()+'&action=payment_form_submit',
+      success: function(response){
+        console.log(response);
+        $('#pay-now-form').html(response);
+        $('#myModal').modal('show');
+      }
+    });
+  });
+
+
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="JEE Mains 2023 College Predictor">
+    <meta name="description" content="College Predictor for jee mains 2023 using your jee rank from josaa counselling and CSAB counseling it also includes college predictor for UPTU and MPDTE counseling">
+    <meta name="keywords" content="college predictor, jee mains, jee mains 2023, jee mains college predictor, collegemitra, jee mains college predictor 2023">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Predictor Guide - Collegemitra</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="icon" type="image/png" href="../assets/cropped-COLLEG-1-removebg-preview(1).png"/>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    span{
+      color: #ff7800;
+    }
+    @media (max-width:991px){
+
+html{
+    font-size: 55%;
+}
+
+.header{
+    padding:2rem;
+}
+
+section{
+    padding:2rem;
+}
+
+}
+
+@media (max-width:768px){
+
+#menu-btn{
+    display: inline-block;
+}
+
+.header .search-form{
+    width:90%;
+}
+
+.header .navbar{
+    position: absolute;
+    top:110%; right:-110%;
+    width:30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    background: #fff;
+}
+
+.header .navbar.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin:2rem 2.5rem;
+    display: block;
+}
+
+}
+
+@media (max-width:450px){
+
+html{
+    font-size: 50%;
+}
+
+.heading{
+    font-size: 2.5rem;
+}
+
+.footer{
+    text-align: center;
+}
+
+.footer .box-container .box .payment-img{
+    margin: 2rem auto;
+}
+
+}
+.footer{
+    background: #fff !important;
+}
+
+.footer .box-container{
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)) !important;
+    gap:1.5rem !important;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem !important;
+    color:var(--black) !important;
+    padding:1rem 0 !important;
+}
+
+.footer .box-container .box h3 i{
+    color:var(--orange) !important;
+}
+
+.footer .box-container .box .links{
+    display: block !important;
+    font-size: 1.5rem !important;
+    color:var(--light-color) !important;
+    padding:1rem 0 !important;
+}
+
+.footer .box-container .box .links i{
+    color:var(--orange) !important;
+    padding-right: .5rem !important;
+}
+
+
+.footer .box-container .box .links:hover i{
+    padding-right: 2rem !important;
+}
+
+
+.footer .box-container .box p{
+    line-height: 1.8 !important;
+    font-size: 1.5rem !important;
+    color:var(--light-color) !important;
+    padding:1rem 0 !important;
+}
+
+.footer .box-container .box .share a{
+    height:4rem !important;
+    width:4rem !important;
+    line-height:4rem !important;
+    border-radius: .5rem !important;
+    font-size: 2rem !important;
+    color:var(--black) !important;
+    margin-right: .2rem !important;
+    background: #eee !important;
+    text-align: center !important;
+}
+
+.footer .box-container .box .share a:hover{
+    background: var(--orange) !important;
+    color: #fff !important;
+}
+
+.footer .box-container .box .email{
+    width: 100% !important;
+    margin:.7rem 0 !important;
+    padding:1rem !important;
+    border-radius: .5rem !important;
+    background: rgb(0, 0, 0) !important;
+    font-size: 1.6rem !important;
+    color:var(--black) !important;
+    text-transform: none !important;
+}
+
+.footer .box-container .box .payment-img{
+    margin-top: 2rem !important;
+    height: 3rem !important;
+    display: block !important;
+}
+
+.footer .credit{
+    text-align: center !important;
+    margin-top: 2rem !important;
+    padding:1rem !important;
+    padding-top: 2.5rem !important;
+    font-size: 2rem !important;
+    color:var(--black) !important;
+    border-top: var(--border) !important;
+}
+
+.footer .credit span{
+    color:var(--orange) !important;
+}
+
+
+  </style>
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="index.html" class="logo"> <i class="fas fa-home"></i> Collegemitra </a>
+
+    <nav class="navbar">
+        <a href="../index.html">home</a>
+        <a href="../index.html#features">features</a>
+        <a href="../index.html#products">services</a>
+        <a href="../index.html#categories">events</a>
+        <a href="../index.html#review">review</a>
+        <a href="../index.html#blogs">blogs</a>
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        <a href="../collegemitra/index.php"><div class="fas fa-user" id="login-btn"></div></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <!-- <form action="" class="login-form" id="login-form">
+        <h3>login now</h3>
+        <input type="email" placeholder="your email" class="box" name="email">
+        <input type="password" placeholder="your password" class="box" name="password">
+        <p>forget your password <a href="../user-system/index.php">click here</a></p>
+        <p>don't have an account <a href="../user-system/index.php">create now</a></p>
+        <input type="submit" value="login now" class="btn" id="login-btn">
+    </form> -->
+
+</header>
+
+<!-- header section ends -->
+
+
+<div id="content" class="s-content s-content--blog">
+
+  <div class="row entry-wrap">
+      <div class="column lg-12">
+
+          <article class="entry format-standard">
+
+              <header class="entry__header">
+
+                  <h1 class="entry__title" style="margin-top: 130px;">
+                    Quick Guide to <span>JEE Mains</span> College Predictor!
+                  </h1>
+
+                  <div class="entry__meta">
+                      <div class="entry__meta-author">
+                          <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                              <circle cx="12" cy="8" r="3.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.8475 19.25H17.1525C18.2944 19.25 19.174 18.2681 18.6408 17.2584C17.8563 15.7731 16.068 14 12 14C7.93201 14 6.14367 15.7731 5.35924 17.2584C4.82597 18.2681 5.70558 19.25 6.8475 19.25Z"></path>
+                          </svg>
+                          <a href="#">Aaditya Ranjan</a> 
+                      </div>
+                      <div class="entry__meta-date">
+                          <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                              <circle cx="12" cy="12" r="7.25" stroke="currentColor" stroke-width="1.5"></circle>
+                              <path stroke="currentColor" stroke-width="1.5" d="M12 8V12L14 14"></path>
+                          </svg>
+                          February 15, 2023 
+                      </div>
+                      <div class="entry__meta-cat">
+                          <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.25 17.25V9.75C19.25 8.64543 18.3546 7.75 17.25 7.75H4.75V17.25C4.75 18.3546 5.64543 19.25 6.75 19.25H17.25C18.3546 19.25 19.25 18.3546 19.25 17.25Z"></path>
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.5 7.5L12.5685 5.7923C12.2181 5.14977 11.5446 4.75 10.8127 4.75H6.75C5.64543 4.75 4.75 5.64543 4.75 6.75V11"></path>
+                          </svg>
+                            
+                          <span class="cat-links">
+                              <a href="#0">Website</a>
+                              <a href="#0">Guide</a>
+                          </span>
+                      </div>
+                  </div>
+              </header>
+
+              <div class="entry__media">
+                  <figure class="featured-image" style="font-size: 150%;">
+                      <img src="./images/predictor.png" sizes="(max-width: 2400px) 100vw, 2400px" alt="">
+                  </figure>
+              </div>
+
+              <div class="content-primary">
+
+                  <div class="entry__content">
+                      <p class="lead">
+                        <span>JEE Mains</span> is one of the most highly-regarded entrance exams in India for admission to engineering colleges. Each year, thousands of students across the country compete for a spot in top engineering colleges, making it a highly competitive and demanding process. In 2023, over 9 lakh students appeared for the <span>JEE Mains</span> exam, with the hope of securing a place in their desired engineering college. </p> 
+                      <p class="lead">
+                        As a <span>JEE Mains</span> aspirant, finding the right college can be a challenge. With so many colleges to choose from and a limited number of seats available, it can be difficult to know where to start. This is where CollegeMitra College Predictor comes in.
+                      </p>
+
+                      <p class="drop-cap">
+                        CollegeMitra College Predictor is an online tool that helps you predict which colleges you are eligible for based on your <span>JEE Mains</span> score and other important factors. By simply entering your <span>JEE Mains</span> rank, category, and gender, you can quickly and easily find a list of colleges that match your eligibility criteria.
+                      </p>
+
+                      <p>
+                        Not only is CollegeMitra College Predictor a great way to maximize your college options, it is also completely free! This means that you can use the tool as many times as you like without having to worry about any hidden costs.
+                      </p>
+  
+                      <figure class="alignwide">
+                          <img src="images/sample-1200.jpg" 
+                            srcset="images/sample-2400.jpg 2400w, 
+                                    images/sample-1200.jpg 1200w, 
+                                    images/sample-600.jpg 600w" sizes="(max-width: 2400px) 100vw, 2400px" alt="">
+                      </figure>
+
+                      <p>
+                        So if you're a <span>JEE Mains</span> aspirant looking for the best college options, look no further than CollegeMitra College Predictor. Get started today and take the first step towards finding the perfect engineering college for you!
+                      </p>
+
+                      <h2>Quick Guide</h2>
+
+                      <blockquote>
+                          <p>
+                            Using CollegeMitra College Predictor Find Your Perfect Engineering College with CollegeMitra College Predictor: An Easy and Effective Guide, it is an easy and effective way to find the right engineering college for you. Here's how you can use it effectively.
+                          </p>
+                          <cite>Aaditya Ranjan</cite>
+                      </blockquote>
+
+                      <h3>1. Set your JEE Mains rank</h3>
+
+                      <p>
+                        To start, you will need to enter your JEE Mains rank. This is a critical factor in determining your college options, so be sure to enter your rank accurately.
+                      </p>
+
+                      <h3>2. Select your category</h3>
+
+                      <p>
+                        CollegeMitra College Predictor offers several categories to choose from, including General, OBC, SC, ST, and others. Choose the category that best represents your eligibility criteria.
+                      </p>
+
+                      <h3>3. Select your gender</h3>
+
+                      <p>
+                        If you are a female candidate, you can choose either the "Gender-neutral" or "Female only" option. If you are male, you will only be able to select "Gender-neutral."
+                      </p>
+
+                      <h3>4. Choose your counseling</h3>
+
+                      <p>
+                        You can select either HSTES, UPTU, CSAB, or "All" in CSAB counselling. Your category will be applied based on your selection, but in UPTU and MPDTE you will be considered an open category if you are not from the home state.
+                      </p>
+
+                      <h3>5. View your results</h3>
+
+                      <p>
+                        Once you have entered all of the necessary information, simply click the "Predict" button to view your results. CollegeMitra College Predictor will generate a list of colleges that match your eligibility criteria based on your JEE Mains rank, category, and other important factors.
+                      </p>
+
+
+                      <p>
+                        By using CollegeMitra College Predictor effectively, you can quickly and easily find the right engineering college for you. With this tool, you can make an informed decision about your future, without having to spend hours researching colleges on your own. So why wait? Get started with CollegeMitra College Predictor today!
+                      </p>
+
+                      <p class="entry__tags">
+                          <strong>Tags:</strong>
+      
+                          <span class="entry__tag-list">
+                              <a href="#0">JEE Mains</a>
+                              <a href="#0">Engineering</a>
+                              <a href="#0">JEE Mains Counselling</a>
+                              <a href="#0">College Predictor</a>
+                          </span>
+          
+                      </p>
+
+                  </div> <!-- end entry-content -->
+
+                  <!-- <div class="post-nav" style="margin-bottom: 10px;">
+                      <div class="post-nav__prev">
+                          <a href="single-standard.html" rel="prev">
+                              <span>Prev</span>
+                              The Pomodoro Technique Really Works. 
+                          </a>
+                      </div>
+                      <div class="post-nav__next">
+                          <a href="single-standard.html" rel="next">
+                              <span>Next</span>
+                              How Imagery Drives User Experience.
+                          </a>
+                      </div>
+                  </div> -->
+
+              </div> <!-- end content-primary -->
+
+          </article>
+      </div>
+  </div>
+</div>
+<hr>
+ <!-- end entry -->
+<!-- footer section starts  -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3> collegemitra <i class="fas fa-home"></i> </h3>
+          <p>provide counselling services for engineering admission</p>
+          <div class="share">
+              <a href="#" class="fab fa-facebook-f"></a>
+              <a href="https://t.me/collegemitra2" class="fab fa-telegram"></a>
+              <a href="#" class="fab fa-instagram"></a>
+              <a href="#" class="fab fa-linkedin"></a>
+          </div>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <a href="#" class="links"> <i class="fas fa-phone"></i> # </a>
+          <a href="#" class="links"> <i class="fas fa-phone"></i> # </a>
+          <a href="#" class="links"> <i class="fas fa-envelope"></i> collegemitra01@gmail.com </a>
+          <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> haryana, india - 125001 </a>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+          <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+          <a href="#" class="links"> <i class="fas fa-arrow-right"></i> services </a>
+          <a href="#" class="links"> <i class="fas fa-arrow-right"></i> events </a>
+          <a href="#" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+          <a href="#" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+      </div>
+
+      <div class="box">
+          <h3>newsletter</h3>
+          <p>subscribe for latest updates</p>
+          <input type="email" placeholder="your email" class="email">
+          <input type="submit" value="subscribe" class="btn">
+          <img src="assets/payment.png" class="payment-img" alt="">
+      </div>
+
+  </div>
+
+  <div class="credit"> created by <span> Collegemitra & team </span> | all rights reserved </div>
+
+</section>
+
+<!-- footer section ends -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="../js/script.js"></script>
+
+
+</body>
+</html>
